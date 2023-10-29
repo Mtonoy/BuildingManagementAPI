@@ -1,4 +1,6 @@
 using BuildingManagement.API.Data;
+using BuildingManagement.API.Services;
+using BuildingManagement.API.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +40,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 // Add services to the container.
+builder.Services.AddScoped<IBuildingService, BuildingService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using BuildingManagement.API.Data.Entity;
+using BuildingManagement.API.Models.Building;
 
 namespace BuildingManagement.API.Data
 {
@@ -18,10 +19,6 @@ namespace BuildingManagement.API.Data
         public DbSet<Objects> Objects { get; set; }
         public DbSet<DataField> DataField { get; set; }
         public DbSet<Reading> Reading { get; set; }
-        #endregion
-
-        #region DB Query Building
-
         #endregion
 
         protected override void OnModelCreating(ModelBuilder builder)
