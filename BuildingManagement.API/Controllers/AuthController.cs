@@ -60,7 +60,7 @@ namespace BuildingManagement.API.Controllers
                 //Add role to the user....
                 await _userManager.AddToRoleAsync(user, role);
                 return StatusCode(StatusCodes.Status200OK,
-                    new Response { Status = "Success", Message = $"User created & Email Sent to {user.Email} SuccessFully" });
+                    new Response { Status = "Success", Message = $"User created SuccessFully" });
             }
             else
             {
