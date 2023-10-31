@@ -88,7 +88,13 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseCors(options =>
+  options.WithOrigins("http://localhost:4200", "https://localhost:4200"
+  )
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowCredentials()
+    );
 app.MapControllers();
 
 app.Run();
